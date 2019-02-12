@@ -1,0 +1,19 @@
+//Jeffrey Almanzar
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string name="jeff", *x;
+	x = new string;
+	*x = name;
+	int age = 21, *y;
+	*y = age;   //mistake
+	cout << *x <<*y<< endl;
+	delete x;
+	delete y; // deallocating a memory adress that never was allocated. It will affect the dynamic memmory heap.
+	return 0;
+}
+/*
+I never allocate a valid memory adrress for y to store a value.
+*/

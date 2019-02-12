@@ -1,0 +1,17 @@
+//Jeffrey Almanzar
+#include <iostream>
+using namespace std;
+
+int main() {
+	int *x, *y, a=5, b=7;
+	x = new int;
+	*x = a;
+	y = new int;
+	*y = b;
+	cout << *x << " "<<*y << endl;
+	delete x;
+	return 0;
+}
+/*
+I never deallocate y. Indeed, my program has a memory leak.
+*/
